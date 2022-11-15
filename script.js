@@ -1,39 +1,54 @@
-const CANTIDAD=parseInt(prompt("Ingrese la cantidad de miembros que desean participar (solo números)"))
+const flores=[
+    {calle: "pedernera", precio: 45000}, 
+    {calle: "alberdi", precio: 52000}, 
+    {calle: "rivadavia", precio: 90000}
+];
 
-for(i=0;i<CANTIDAD;i++){
-    let nombre=prompt("Ingrese nombre").toUpperCase()
-    let apellido=prompt("Ingrese apellido").toUpperCase()
-    let edad
-    const FECHANACIMIENTO=parseInt(prompt("Ingrese su año de nacimiento (solo números)"))
+const caballito=[
+    {calle: "ortega", precio: 105000},
+    {calle: "espinosa", precio: 44500},
+    {calle: "campichuelo", precio: 75000}
+];
 
-    edad=2022-FECHANACIMIENTO
+const belgrano=[
+    {calle: "echeverria", precio: 70000}, 
+    {calle: "migueletes", precio: 41000}, 
+    {calle: "conesa", precio: 69000}
+];
 
-    if (nombre =="" || apellido ==""){
-        alert("Ingrese nombre y apellido")
-        i--
+const boedo=[
+    {calle: "constitucion", precio: 120000}, 
+    {calle: "maza", precio: 148000}, 
+    {calle: "tarija", precio: 97000}
+]
+
+let menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir."))
+
+while (menu != 0){
+
+    if (menu==1) {
+        let calleElegida=prompt("Elija calle: Pedernera - Alberdi - Rivadavia").toLowerCase()
+        alert(JSON.stringify(flores.find((flores) => flores.calle === calleElegida)))
+        menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir.")) 
+    }  
+    else if (menu==2){
+        calleElegida=prompt("Elija calle: Ortega - Espinosa - Campichuelo").toLowerCase()
+        alert(JSON.stringify(caballito.find((caballito) => caballito.calle === calleElegida)))
+        menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir."))
     }
-    else if (edad < 0){
-        alert("Ingrese un año válido")
-        i--
+    else if (menu==3){
+        calleElegida=prompt("Elija calle: Echeverria - Migueletes - Conesa").toLowerCase()
+        alert(JSON.stringify(belgrano.find((belgrano) => belgrano.calle === calleElegida)))
+        menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir."))
     }
-    else if (edad <= 5){
-        console.log("Bienvenido/a madre/padre/tutor de", nombre , apellido, ", el/ella tiene", edad, "años de edad y es un bebé.")
+    else if (menu==4){
+        calleElegida=prompt("Elija calle: Constitusion - Maza - Tarija").toLowerCase()
+        alert(JSON.stringify(boedo.find((boedo) => boedo.calle === calleElegida)))
+        menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir."))
     }
-    else if (edad <= 12){
-        console.log("Bienvenido/a", nombre , apellido + ", tenés", edad, "años de edad y sos un niño.")
+    else {
+        alert("Ingrese una opción válida.")
+        menu=parseInt(prompt("¿En que barrio desea alquilar vivienda? 1=Flores; 2=Caballito; 3=Belgrano; 4=Boedo; 0=Salir."))
     }
-    else if (edad <=25){
-        console.log("Bienvenido/a", nombre , apellido + ", tenés", edad, "años de edad y sos un adolescente.")
-    }
-    else if (edad <=65){
-        console.log("Bienvenido/a", nombre , apellido + ", usted tiene", edad, "años de edad y es un adulto.")
-    }
-    else if (edad <=120){
-        console.log("Bienvenido", nombre , apellido + ", usted tiene", edad, "años de edad y es un anciano.")
-    }
-    else{
-        alert("Ingrese un año válido")
-        i--
-    }
+
 }
-
