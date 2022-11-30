@@ -200,13 +200,13 @@
   .formularioMenu span {
     margin-bottom: 50px;
   }
-  .formularioMenu #carta {
+  #carta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 150px;
     margin: 50px 0px 60px 0px;
   }
-  .formularioMenu #carta .carta__tarjeta {
+  .carta__tarjeta {
     width: 250px;
     height: 250px;
     display: flex;
@@ -215,15 +215,15 @@
     margin-bottom: 100px;
     gap: 20px;
   }
-  .formularioMenu #carta .carta__tarjeta .carta__titulo {
+  .carta__titulo {
     text-align: center;
     font-size: 23px;
     color: #502314;
     font-family: Flame;
     font-weight: bold
   }
-  .formularioMenu #carta .carta__tarjeta .carta__imagen {
-    height: 220px;
+  .carta__imagen {
+    width: 300px;
     border-radius: 8px;
     align-items: center;
     transition: 0.4s ease all;
@@ -231,19 +231,35 @@
   .formularioMenu #carta .carta__tarjeta .carta__imagen:hover {
     transform: scale(1.05);
   }
-  #carrito{
-    width: 200px;
-    min-height: 100px;
-    border: 1px solid;
+  .carta__precio{
+    font-size: 30px;
   }
-  .carrito__item{
+  #contenedorCarrito {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #502314;
+    padding: 5px;
   }
-  .carrito__item h4{
-    margin-right: 5px;
+  #verCarrito{
+    display: none;
   }
-  .botonProducto{
-    display: inline-flex;
+  .botonCarrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 60px;
+    background: #502314;
+    color: rgb(253, 219, 156);
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+  }
+  .botonProducto {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 110px;
@@ -254,6 +270,7 @@
     border-radius: 5px;
     border: none;
     padding: 10px;
+    border: 1px solid #502314;
   }
   .hFooter {
     width: 100%;
