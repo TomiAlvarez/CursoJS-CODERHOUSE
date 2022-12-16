@@ -93,4 +93,16 @@ class Producto {
     totalCompra.innerHTML = total;
   };
   
+  const botonCompra = document.getElementById('comprar')
+
+  botonCompra.addEventListener("click", mostrarCompra);
+
+  function mostrarCompra(){
+    Swal.fire({
+      title: 'Listo',
+      text: 'Tu compra fue realizada con éxito.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    })
+  };
   
