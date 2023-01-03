@@ -234,29 +234,65 @@
   .carta__precio{
     font-size: 30px;
   }
+  .divBuscador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  #buscador{
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    border-color: #502314;
+  }
   #contenedorCarrito {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #502314;
     padding: 5px;
   }
   #verCarrito{
     display: none;
   }
+  .total{
+    font-size: 60px;
+    margin-top: 50px;
+  }
+  #totalCompra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    
+  }
+  .divCarrito{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+  }
   .botonCarrito {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 110px;
-    height: 60px;
+    width: 140px;
+    height: 80px;
     background: #502314;
     color: rgb(253, 219, 156);
-    font-size: 17px;
+    font-size: 23px;
     border-radius: 5px;
     border: none;
     padding: 10px;
     border: 1px solid whitesmoke;
+  }
+  .botonCarrito:hover{
+    background: rgb(253, 219, 156);
+    color: #502314;
+    border: 1px solid rgb(39, 5, 5);
   }
   .botonProducto {
     display: flex;
@@ -265,12 +301,17 @@
     width: 110px;
     height: 60px;
     background: rgb(253, 219, 156);
-    color: black;
+    color: #502314;
     font-size: 17px;
     border-radius: 5px;
     border: none;
     padding: 10px;
     border: 1px solid #502314;
+  }
+  .botonProducto:hover {
+    background: #502314;
+    color: rgb(253, 219, 156);
+    border: whitesmoke;
   }
   .hFooter {
     width: 100%;

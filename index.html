@@ -41,19 +41,23 @@
         </div>
       </nav>
     <h1 class="tituloPrincipal">Menú</h1>
+      <div class="divBuscador">
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+      </div>
     <!--Lista de productos-->
     <div class="formularioMenu">
         <span id="carne"></span>
         <h2 class="seccionMenu">Carne</h2>
         <section id="carta">
-            
+
         </section>
-        <h2>Carrito de Compras:</h2>
-        <button id="verCarrito" class="botonCarrito">Ver Carrito</button>
-        <button id="comprar" class="botonCarrito">Comprar</button>
-        <button id="vaciarCarrito" class="botonCarrito">Vaciar Carrito</button>
-        <h3>Total de la compra: <span id="totalCompra">0</span></h3>
-        <div id="contenedorCarrito"></div>
+        <div class="divCarrito">
+          <button id="verCarrito" class="botonCarrito">Ver Carrito</button>
+          <button id="comprar" class="botonCarrito">Comprar</button>
+          <button id="vaciarCarrito" class="botonCarrito">Vaciar Carrito</button>
+          <h3 class="total">Total de la compra:<br><span id="totalCompra">$0</span></h3>
+          <div id="contenedorCarrito"></div>
+        </div>
     </div>
     <!--Footer-->
     <div class="hFooter">
